@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeeshan Mustafa - SQA Automation Engineer | Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Zeeshan Mustafa - Professional SQA Automation Engineer specializing in Playwright, Selenium, API Testing, and CI/CD. Hire me for quality assurance and test automation solutions.">
+    <meta name="keywords"
+        content="QA Engineer, Automation Testing, Selenium, Playwright, Software Testing, API Testing, CI/CD, Manual Testing">
+    <meta name="author" content="Zeeshan Mustafa">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Zeeshan Mustafa - SQA Automation Engineer">
+    <meta property="og:description"
+        content="Professional portfolio showcasing expertise in test automation, quality assurance, and software testing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': {
+                            50: '#f0f9ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        },
+                        'accent': '#10b981',
+                        'dark': {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            text: '#f8fafc'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'typing': 'typing 3.5s steps(40, end), blink-caret .75s step-end infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        typing: {
+                            'from': { width: '0' },
+                            'to': { width: '100%' }
+                        },
+                        'blink-caret': {
+                            'from, to': { 'border-color': 'transparent' },
+                            '50%': { 'border-color': '#3b82f6' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-300">
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-primary-500 to-accent rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">ZM</span>
+                    </div>
+                    <span class="font-bold text-xl">Zeeshan Mustafa</span>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+
+                <!-- Theme Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link block py-2">Home</a>
+                    <a href="#about" class="nav-link block py-2">About</a>
+                    <a href="#experience" class="nav-link block py-2">Experience</a>
+                    <a href="#skills" class="nav-link block py-2">Skills</a>
+                    <a href="#projects" class="nav-link block py-2">Projects</a>
+                    <a href="#contact" class="nav-link block py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-gray-50 dark:from-dark-bg dark:via-dark-card dark:to-dark-bg relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 py-20 text-center relative z-10">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                <!-- Profile Image Placeholder -->
+                <div class="w-48 h-48 mx-auto mb-8 relative">
+                    <div
+                        class="w-full h-full bg-gradient-to-br from-primary-500 to-accent rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
+                        <img src="assets/Picture.jpeg" Profile Picture"
+                            class="w-full h-full object-cover rounded-full" />
+                    </div>
+                    <div
+                        class="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500/20 to-accent/20 animate-pulse-slow">
+                    </div>
+                </div>
+
+                <!-- Name and Title -->
+                <h1
+                    class="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-accent bg-clip-text text-transparent">
+                    Zeeshan Mustafa
+                </h1>
+
+                <!-- Animated Tagline -->
+                <div class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 h-8">
+                    <span id="typing-text" class="border-r-2 border-primary-500 pr-1"></span>
+                </div>
+
+                <!-- Description -->
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+                    data-aos="fade-up" data-aos-delay="300">
+                    Passionate Software Quality Assurance Engineer with 3+ years of experience in automation testing,
+                    manual testing, and CI/CD integration. Specialized in building robust test frameworks and ensuring
+                    software excellence.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <a href="#contact" class="btn-primary">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Get In Touch
+                    </a>
+                    <button id="download-resume" class="btn-secondary">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Resume
+                    </button>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6 mt-8" data-aos="fade-up" data-aos-delay="700">
+                    <a href="https://linkedin.com/in/ZeeshanJumabhoy" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/ZeeshanJumabhoy" target="_blank" class="social-link">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="mailto:mustafazeeshan333@gmail.com" class="social-link">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+            <a href="#about" class="text-primary-500 hover:text-primary-600 transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-left" data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-6 text-primary-600 dark:text-primary-400">
+                            Quality Assurance Professional
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                            Graduated from FAST NUCES Karachi with a BS in Software Engineering (2025).
+                            I bring 3+ years of combined experience in SQA Automation & Manual Testing,
+                            with a strong foundation in modern testing frameworks and methodologies.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                            My expertise spans across test automation tools like Playwright, Selenium, and Appium,
+                            along with performance testing using JMeter and API testing with Postman.
+                            I'm passionate about ensuring software quality through comprehensive testing strategies.
+                        </p>
+
+                        <!-- Contact Info -->
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-primary-500 w-6"></i>
+                                <span class="ml-3">mustafazeeshan333@gmail.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-primary-500 w-6"></i>
+                                <span class="ml-3">+92 342 262 5647</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-primary-500 w-6"></i>
+                                <span class="ml-3">Karachi, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-primary-600 dark:text-primary-400">3+</div>
+                            <div class="text-gray-600 dark:text-gray-300">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-primary-600 dark:text-primary-400">89%</div>
+                            <div class="text-gray-600 dark:text-gray-300">CI/CD Pass Rate</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-primary-600 dark:text-primary-400">75%</div>
+                            <div class="text-gray-600 dark:text-gray-300">Effort Reduction</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-primary-600 dark:text-primary-400">30%</div>
+                            <div class="text-gray-600 dark:text-gray-300">Time Savings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50 dark:bg-dark-card">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Work Experience</h2>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div
+                        class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary-500 to-accent h-full">
+                    </div>
+
+                    <!-- Experience Items -->
+                    <div class="space-y-16">
+                        <!-- Current Position -->
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content bg-white dark:bg-dark-bg p-8 rounded-xl shadow-lg">
+                                <div class="flex items-center mb-4">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <span class="timeline-badge">2025 – Present</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2 text-primary-600 dark:text-primary-400">
+                                    SQA Automation Engineer – Associate
+                                </h3>
+                                <h4 class="text-lg font-semibold mb-4 text-accent">Vidizmo AI</h4>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Designed & automated E2E tests with Playwright (TypeScript)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Investigated CI/CD pipeline failures using Trace Viewer, maintaining 89% pass
+                                        rate
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Contributed to user story refinement and acceptance criteria
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Previous Position 1 -->
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-content bg-white dark:bg-dark-bg p-8 rounded-xl shadow-lg ml-auto">
+                                <div class="flex items-center mb-4 justify-end">
+                                    <div class="mr-4">
+                                        <span class="timeline-badge">2024 – 2025</span>
+                                    </div>
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2 text-primary-600 dark:text-primary-400 text-right">
+                                    QA Engineer – Trainee
+                                </h3>
+                                <h4 class="text-lg font-semibold mb-4 text-accent text-right">QBS CO.</h4>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Implemented Performance, Regression, and Smoke testing for PSO BLUE LPG project
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Built API automation framework (Java, Cucumber) reducing test time by 30%
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Conducted API testing (Postman) and performance testing (JMeter)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Automated UI test cases using Playwright
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Previous Position 2 -->
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-content bg-white dark:bg-dark-bg p-8 rounded-xl shadow-lg">
+                                <div class="flex items-center mb-4">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <span class="timeline-badge">2024</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2 text-primary-600 dark:text-primary-400">
+                                    Automation Test Engineer – Intern
+                                </h3>
+                                <h4 class="text-lg font-semibold mb-4 text-accent">The ModVentures</h4>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Automated regression & functional testing for Toucher Mobile App (Appium, Jest,
+                                        Java, Maven)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Reduced manual testing effort by 75%
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-accent mt-1 mr-3 flex-shrink-0"></i>
+                                        Integrated Allure reporting, JIRA, and ClickUp for comprehensive test management
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Technical Skills</h2>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Automation Testing -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-header">
+                            <i class="fas fa-robot text-3xl text-primary-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-6">Automation Testing</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-skill="95">
+                                <div class="skill-label">
+                                    <span>Playwright</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="90">
+                                <div class="skill-label">
+                                    <span>Selenium</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="85">
+                                <div class="skill-label">
+                                    <span>Appium</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-header">
+                            <i class="fas fa-code text-3xl text-accent mb-4"></i>
+                            <h3 class="text-xl font-bold mb-6">Programming</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-skill="90">
+                                <div class="skill-label">
+                                    <span>Java</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="88">
+                                <div class="skill-label">
+                                    <span>JavaScript</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="85">
+                                <div class="skill-label">
+                                    <span>C#</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="82">
+                                <div class="skill-label">
+                                    <span>TypeScript</span>
+                                    <span class="skill-percentage">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testing Tools -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-header">
+                            <i class="fas fa-tools text-3xl text-primary-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-6">Testing Tools</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-skill="92">
+                                <div class="skill-label">
+                                    <span>Postman</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="88">
+                                <div class="skill-label">
+                                    <span>JMeter</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="85">
+                                <div class="skill-label">
+                                    <span>JIRA</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CI/CD & DevOps -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-header">
+                            <i class="fas fa-infinity text-3xl text-accent mb-4"></i>
+                            <h3 class="text-xl font-bold mb-6">CI/CD & DevOps</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-skill="87">
+                                <div class="skill-label">
+                                    <span>Jenkins</span>
+                                    <span class="skill-percentage">87%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="87%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="85">
+                                <div class="skill-label">
+                                    <span>Azure Pipelines</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="80">
+                                <div class="skill-label">
+                                    <span>Docker</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                        <div class="skill-header">
+                            <i class="fas fa-layer-group text-3xl text-primary-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-6">Frameworks</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-skill="90">
+                                <div class="skill-label">
+                                    <span>Cucumber</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="85">
+                                <div class="skill-label">
+                                    <span>NUnit</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="88">
+                                <div class="skill-label">
+                                    <span>Jest</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="87">
+                                <div class="skill-label">
+                                    <span>JUnit</span>
+                                    <span class="skill-percentage">87%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="87%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Methodologies -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                        <div class="skill-header">
+                            <i class="fas fa-project-diagram text-3xl text-accent mb-4"></i>
+                            <h3 class="text-xl font-bold mb-6">Methodologies</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="skill-item" data-skill="95">
+                                <div class="skill-label">
+                                    <span>Agile/SCRUM</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="90">
+                                <div class="skill-label">
+                                    <span>Test-Driven Development</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="88">
+                                <div class="skill-label">
+                                    <span>Behavior-Driven Development</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-dark-card">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Featured Projects</h2>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="bg-gradient-to-br from-red-500 to-pink-500 h-48 flex items-center justify-center">
+                            <i class="fas fa-tint text-6xl text-white"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/ZeeshanJumabhoy" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Blood Safe Life</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Real-time Blood Donation Management System developed as Final Year Project.
+                            Features donor registration, blood bank management, and emergency request handling.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-calendar mr-2"></i>
+                            Final Year Project
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div
+                            class="bg-gradient-to-br from-blue-500 to-indigo-500 h-48 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-6xl text-white"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/ZeeshanJumabhoy" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Selenium E-Commerce Framework</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Comprehensive automation framework for e-commerce testing using Selenium C# and NUnit.
+                            Includes CI/CD integration and detailed reporting.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">NUnit</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-star mr-2"></i>
+                            Automation Framework
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="bg-gradient-to-br from-green-500 to-teal-500 h-48 flex items-center justify-center">
+                            <i class="fas fa-vial text-6xl text-white"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/ZeeshanJumabhoy" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">JUnit 5 Testing Framework</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Advanced testing framework implementation with JUnit 5, achieving 85% code coverage.
+                            Features parameterized tests and comprehensive assertions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">JUnit 5</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Maven</span>
+                            <span class="tech-tag">Mockito</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-chart-line mr-2"></i>
+                            85% Coverage Achieved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section id="certifications" class="py-20 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Certifications & Achievements</h2>
+
+            <div class="max-w-6xl mx-auto">
+                <!-- Certifications -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-primary-600 dark:text-primary-400"
+                        data-aos="fade-up">
+                        Professional Certifications
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="cert-icon">
+                                <i class="fas fa-certificate text-3xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Software Testing Fundamentals</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Alison</p>
+                            <span class="cert-year">2024</span>
+                        </div>
+
+                        <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="cert-icon">
+                                <i class="fas fa-tachometer-alt text-3xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">JMeter Performance Testing</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">BlazeMeter</p>
+                            <span class="cert-year">2024</span>
+                        </div>
+
+                        <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="cert-icon">
+                                <i class="fas fa-plug text-3xl"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">API Testing with Postman</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">Postman Academy</p>
+                            <span class="cert-year">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-primary-600 dark:text-primary-400"
+                        data-aos="fade-up">
+                        Awards & Achievements
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy text-4xl text-yellow-500"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Runner-up</h4>
+                            <p class="text-gray-600 dark:text-gray-300">KEAT'23 Manual Testing Competition</p>
+                        </div>
+
+                        <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="achievement-icon">
+                                <i class="fas fa-medal text-4xl text-orange-500"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">3rd Place</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Game of Code 5.0 Programming Competition</p>
+                        </div>
+
+                        <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="achievement-icon">
+                                <i class="fas fa-award text-4xl text-blue-500"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Best Delegate</h4>
+                            <p class="text-gray-600 dark:text-gray-300">TGD 24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership Roles -->
+                <div>
+                    <h3 class="text-2xl font-bold text-center mb-8 text-primary-600 dark:text-primary-400"
+                        data-aos="fade-up">
+                        Leadership & Volunteer Roles
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="leadership-card" data-aos="slide-up" data-aos-delay="100">
+                            <div class="leadership-icon">
+                                <i class="fas fa-users text-3xl text-primary-500"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Head of Code in Dark Competition</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">DevDay'24</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Led competitive programming event
+                                organization</p>
+                        </div>
+
+                        <div class="leadership-card" data-aos="slide-up" data-aos-delay="200">
+                            <div class="leadership-icon">
+                                <i class="fas fa-calendar-alt text-3xl text-accent"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">ACM Event Management Head</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">2023–2024</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Managed technical events and workshops
+                            </p>
+                        </div>
+
+                        <div class="leadership-card" data-aos="slide-up" data-aos-delay="300">
+                            <div class="leadership-icon">
+                                <i class="fas fa-handshake text-3xl text-primary-500"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">FDSS Competition Co-Head</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">2023</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Co-organized software development
+                                competitions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact"
+        class="py-20 bg-gradient-to-br from-primary-50 via-white to-gray-50 dark:from-dark-bg dark:via-dark-card dark:to-dark-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16" data-aos="fade-up">Let's Get In Touch</h2>
+
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white dark:bg-dark-card rounded-2xl p-8 shadow-xl" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6 text-primary-600 dark:text-primary-400">Send Me a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info & GitHub Activity -->
+                <div class="space-y-8" data-aos="fade-left">
+                    <!-- Contact Information -->
+                    <div class="bg-white dark:bg-dark-card rounded-2xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-primary-600 dark:text-primary-400">Get In Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <a href="mailto:mustafazeeshan333@gmail.com"
+                                        class="text-gray-600 dark:text-gray-300 hover:text-primary-600">
+                                        mustafazeeshan333@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <a href="tel:+923422625647"
+                                        class="text-gray-600 dark:text-gray-300 hover:text-accent">
+                                        +92 342 262 5647
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fab fa-linkedin text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">LinkedIn</h4>
+                                    <a href="https://linkedin.com/in/ZeeshanJumabhoy" target="_blank"
+                                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600">
+                                        linkedin.com/in/ZeeshanJumabhoy
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Activity -->
+                    <div class="bg-white dark:bg-dark-card rounded-2xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-primary-600 dark:text-primary-400">GitHub Activity</h3>
+                        <div class="flex items-center mb-4">
+                            <i class="fab fa-github text-3xl text-gray-700 dark:text-gray-300 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">@ZeeshanJumabhoy</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Active in open source projects</p>
+                            </div>
+                        </div>
+
+                        <!-- GitHub Stats Placeholder -->
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600 dark:text-gray-300">Public Repositories</span>
+                                <span class="font-semibold">25+</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600 dark:text-gray-300">Contributions (2024)</span>
+                                <span class="font-semibold">200+</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600 dark:text-gray-300">Languages Used</span>
+                                <span class="font-semibold">Java, JS, C#</span>
+                            </div>
+                        </div>
+
+                        <a href="https://github.com/ZeeshanJumabhoy" target="_blank" class="btn-secondary mt-6 w-full">
+                            <i class="fab fa-github mr-2"></i>
+                            View GitHub Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-primary-500 to-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">ZM</span>
+                        </div>
+                        <span class="font-bold text-xl">Zeeshan Mustafa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Professional SQA Engineer passionate about delivering quality software through
+                        comprehensive testing strategies and automation frameworks.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/ZeeshanJumabhoy" target="_blank" class="footer-social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ZeeshanJumabhoy" target="_blank" class="footer-social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:mustafazeeshan333@gmail.com" class="footer-social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Quick Links</h3>
+                    <div class="space-y-3 flex flex-wrap items-center">
+                        <a href="#home" class="footer-link">Home</a>
+                        <span class="mx-2 border-l-2 border-blue-600 h-5"></span>
+                        <a href="#about" class="footer-link">About</a>
+                        <span class="mx-2 border-l-2 border-blue-600 h-5"></span>
+                        <a href="#experience" class="footer-link">Experience</a>
+                        <span class="mx-2 border-l-2 border-blue-600 h-5"></span>
+                        <a href="#skills" class="footer-link">Skills</a>
+                        <span class="mx-2 border-l-2 border-blue-600 h-5"></span>
+                        <a href="#projects" class="footer-link">Projects</a>
+                        <span class="mx-2 border-l-2 border-blue-600 h-5"></span>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </div>
+
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Contact Information</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-primary-400 w-5 mr-3"></i>
+                            <span class="text-gray-400">mustafazeeshan333@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-primary-400 w-5 mr-3"></i>
+                            <span class="text-gray-400">+92 342 262 5647</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-primary-400 w-5 mr-3"></i>
+                            <span class="text-gray-400">Karachi, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Zeeshan Mustafa. All rights reserved. |
+                    <span class="text-primary-400">Quality Assurance Professional</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <!-- EmailJS SDK (add BEFORE js/main.js) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+            // replace 'YOUR_EMAILJS_USER_ID' with the User ID (public key) from your EmailJS account
+            (function () {
+                emailjs.init('yf52wj26r162bM1BD');
+            })();
+    </script>
+
+</body>
+
+</html>
