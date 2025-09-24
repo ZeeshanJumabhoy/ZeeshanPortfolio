@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     initBackToTop();
     initPDFDownload();
     initNavbarScrollEffect();
+    initBugHunt();
+    closeModalAndScroll();
 });
 
 // Theme Toggle Functionality
@@ -28,14 +30,22 @@ function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
-    // Check for saved theme or default to light mode
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    html.classList.toggle('dark', savedTheme === 'dark');
+    // Default to dark mode if no preference is saved
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        html.classList.remove('dark');
+    } else {
+        html.classList.add('dark');
+    }
 
     themeToggle.addEventListener('click', function () {
         html.classList.toggle('dark');
-        const isDark = html.classList.contains('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        // Save user preference
+        if (html.classList.contains('dark')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
 
         // Add a little animation effect
         this.style.transform = 'scale(0.9)';
@@ -44,6 +54,126 @@ function initThemeToggle() {
         }, 150);
     });
 }
+// Bug Hunt Challenge
+function initBugHunt() {
+    const bugs = document.querySelectorAll('#bug-area .bug');
+    const area = document.getElementById('bug-area');
+    const redScoreEl = document.getElementById('redScore');
+    const blackScoreEl = document.getElementById('blackScore');
+    if (!bugs.length || !area) return;
+
+    let redScore = 0;
+    let blackScore = 0;
+    const maxRed = 5;
+    const maxBlack = 3;
+
+    const qaMessages = [
+        "Bug caught in UAT — regression wasn't enough 🤯",
+        "Sanity Test failed… guess who found it? YOU 🐞",
+        "Defect logged ✅ Severity: Major",
+        "Oops, active bug reappeared in Sprint Review 😅",
+        "Smoke Test couldn’t hide this one 🔥",
+        "Scrum Master raised it in daily standup 📣",
+        "Agile board updated: another bug story added 📝"
+    ];
+
+    const redMessages = [
+        "🚨 Production defect escaped CI/CD pipeline!",
+        "Critical bug found in Sprint Demo — rollback initiated ⏪",
+        "Saved a blocker in Regression, sprint can continue ✅",
+        "Escaped bug caught before release — sanity restored 🎯",
+        "Scrum velocity protected — you’re the hero of the sprint 🦸",
+        "UAT passed smoothly thanks to your quick catch 👏",
+        "This defect was Severity-1 — you just saved the release 🚀"
+    ];
+
+    function moveBug(bug) {
+        const rect = area.getBoundingClientRect();
+        const maxX = rect.width - 60;
+        const maxY = rect.height - 60;
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+        bug.style.left = `${x}px`;
+        bug.style.top = `${y}px`;
+    }
+
+    // Move bugs every 2.5s
+    setInterval(() => bugs.forEach(moveBug), 2500);
+    bugs.forEach(moveBug);
+
+    // Toast
+    function showToast(text) {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = text;
+        container.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+
+    // Open modal
+    function openModal() {
+        document.getElementById('bugModal').classList.remove('hidden');
+    }
+
+    // Update UI
+    function updateScoreboard() {
+        redScoreEl.textContent = redScore;
+        blackScoreEl.textContent = blackScore;
+    }
+
+    // Reset scores
+    function resetGame() {
+        redScore = 0;
+        blackScore = 0;
+        updateScoreboard();
+    }
+
+    // Click handling
+    bugs.forEach(bug => {
+        bug.addEventListener('click', () => {
+            if (bug.classList.contains('red-bug')) {
+                redScore++;
+                showToast(redMessages[Math.floor(Math.random() * redMessages.length)]);
+            } else {
+                blackScore++;
+                showToast(qaMessages[Math.floor(Math.random() * qaMessages.length)]);
+            }
+
+            updateScoreboard();
+
+            // Check limits
+            if (redScore >= maxRed || blackScore >= maxBlack) {
+                openModal();
+            }
+
+            moveBug(bug);
+        });
+    });
+
+    // Expose reset function
+    window.resetBugHunt = resetGame;
+}
+
+// Close modal and scroll to contact
+function closeModalAndScroll() {
+    document.getElementById('bugModal').classList.add('hidden');
+    window.resetBugHunt(); // reset game scores
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
+
+// Mobile-friendly tooltip toggle
+document.querySelectorAll(".tooltip-wrapper a").forEach(link => {
+    link.addEventListener("click", (e) => {
+        const wrapper = e.target.closest(".tooltip-wrapper");
+        wrapper.classList.toggle("active");
+
+        // auto-hide after 3 seconds
+        setTimeout(() => wrapper.classList.remove("active"), 3000);
+    });
+});
+
 
 // Mobile Menu Functionality
 function initMobileMenu() {

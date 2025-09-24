@@ -380,6 +380,184 @@ select:focus {
     @apply animate-pulse;
 }
 
+/* Bug styles */
+.bug {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: left 0.6s ease, top 0.6s ease, transform 0.2s ease;
+    z-index: 30;
+}
+
+.black-bug {
+    color: black;
+}
+
+.red-bug {
+    color: red;
+}
+
+/* Toast */
+#toast-container {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+}
+
+.toast {
+    background: #2563eb;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-top: 12px;
+    font-weight: 500;
+    text-align: center;
+    animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+}
+
+/* Contact Me button style inside modal */
+.modal .btn-primary {
+    margin-top: 1rem;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-weight: 600;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #c0c0c0, #e0e0e0) 1;
+    background: transparent;
+    color: #2563eb;
+    transition: all 0.4s ease;
+}
+
+.modal .btn-primary:hover {
+    background: linear-gradient(90deg, #2563eb, #1e40af);
+    color: white;
+    border: none;
+}
+
+/* Scoreboard */
+#bug-scoreboard {
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+
+#bug-scoreboard .score {
+    padding: 6px 14px;
+    border-radius: 10px;
+    min-width: 140px;
+}
+
+#bug-scoreboard .red-score {
+    background: rgba(220, 38, 38, 0.1);
+    color: #dc2626;
+}
+
+#bug-scoreboard .black-score {
+    background: rgba(199, 200, 201, 0.995);
+    color: #111827;
+}
+
+/* Responsive scoreboard */
+@media (max-width: 640px) {
+    #bug-scoreboard {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/* Tooltip wrapper */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip itself */
+.custom-tooltip {
+    position: absolute;
+    bottom: 125%;
+    /* Show above link */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Little arrow */
+.custom-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1e40af transparent transparent transparent;
+}
+
+/* Show on hover */
+.tooltip-wrapper:hover .custom-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+/* Mobile tap support */
+.tooltip-wrapper.active .custom-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 640px) {
+    .custom-tooltip {
+        font-size: 12px;
+        padding: 6px 10px;
+        white-space: normal;
+        /* allow wrapping */
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+
 /* Custom Selection */
 ::selection {
     @apply bg-blue-200 text-blue-900;
