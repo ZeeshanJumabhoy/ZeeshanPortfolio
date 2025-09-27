@@ -1,6 +1,9 @@
 // Zeeshan Mustafa Portfolio - JavaScript Functionality
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Ensure we start at the top of the page
+    window.scrollTo(0, 0);
+    
     // Initialize AOS (Animate On Scroll)
     AOS.init({
         duration: 1000,
@@ -22,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initPDFDownload();
     initNavbarScrollEffect();
     initBugHunt();
-    closeModalAndScroll();
+    // Removed closeModalAndScroll() from page load - only call when modal is actually closed
 });
 
 // Theme Toggle Functionality
@@ -157,9 +160,12 @@ function initBugHunt() {
 
 // Close modal and scroll to contact
 function closeModalAndScroll() {
-    document.getElementById('bugModal').classList.add('hidden');
-    window.resetBugHunt(); // reset game scores
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    const modal = document.getElementById('bugModal');
+    if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        window.resetBugHunt(); // reset game scores
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 
@@ -667,6 +673,14 @@ function initKeyboardNavigation() {
 
 // Initialize keyboard navigation
 initKeyboardNavigation();
+
+// Prevent any unwanted scrolling on page load
+window.addEventListener('load', function() {
+    // Ensure we stay at the top
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 100);
+});
 
 // Performance optimization: Throttle scroll events
 function throttle(func, limit) {
